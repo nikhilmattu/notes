@@ -1,31 +1,44 @@
 body {
   font-family: sans-serif;
   font-size: 12px;
-  padding: 12px;
 }
 
-textarea {
-  resize: none;
+h1 {
+  background: #f4bc42;
+  margin: -10px;
+  padding: 10px;
 }
 
-textarea:focus {
+div:focus {
   outline: none;
 }
 
 .notes {
   display: flex;
   flex-direction: column;
+  margin-right: 5px;
 }
 
-.notes > div {
-  padding-bottom: 5px;
+.noteContainer {
+  width:100%
 }
 
-.note {
+.noteContent {
   width: 100%;
-  padding: 15px 10px;
-  position: relative;
-  white-space: pre-wrap;
+  height: 25px;
+  white-space: no-wrap;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+  line-height: 20px;
+  background: #ffe3a8;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  resize: none;
 }
 
 .noteContainer {
@@ -33,22 +46,60 @@ textarea:focus {
   flex-direction: row;
 }
 
-.note-content {
-  width: 100%;
-  height: 50px;
-  margin-top: 15px;
-}
-
 .create-note {
-  width:100%;
   display: flex;
   flex-direction: column;
+  margin-top: 5px;
 }
 
 .create-note-form {
-  width: 100%;
-  min-height: 50px;
   display: flex;
   margin-top: 15px;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+#newNoteText {
+  width:100%;
+}
+
+.deleteButton {
+  background-image: url("garbage.svg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.completeButton {
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.incompleteButton {
+  background-image: url("checkmark.svg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.noteInfo {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  font-size: 10px;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.activeFilter {
+  background: lightgray;
+  outline: none;
 }

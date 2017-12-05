@@ -5,12 +5,17 @@
   </head>
 
   <body>
-    <h1>Notes</h1>
+    <h1>To Do</h1>
     <div class="create-note">
       <form class="create-note-form" id="createNoteForm">
-        <textarea id="newNoteText" class="note-content" placeholder="Write a note" rows="2" cols="30" required></textarea>
-        <input type="submit" value="Create" />
+        <input type="text" id="newNoteText" placeholder="Remind me!" required></textarea>
+        <input type="submit" value="Add" />
       </form>
+    <div>
+      <button id="all" onclick="setFilter(filters.ALL)">Show All</button>
+      <button id="completed" onclick="setFilter(filters.COMPLETED)">Show Completed</button>
+      <button id="incomplete" onclick="setFilter(filters.INCOMPLETE)">Show Incomplete</button>
+    </div>
     </div>
     <div class="notes" id="notesContainer"></div>
   </body>
